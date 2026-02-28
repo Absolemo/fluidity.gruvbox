@@ -40,6 +40,10 @@ export const links: linkGroup[] = [                               /* Hier werden
         value: "https://monkeytype.com/",
       },
       {
+        label: "./deepl",
+        value: "https://www.deepl.com/en"
+      },
+      {
         label: "./amazon",
         value: "https://amazon.de",
       },
