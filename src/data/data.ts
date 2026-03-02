@@ -160,6 +160,10 @@ export const links: linkGroup[] = [                               /* Hier werden
         value: "https://wiki-de.guildwars2.com/wiki/Event-Timer",
       },
       {
+        label: "./metabattle",
+        value: "https://metabattle.com/wiki/MetaBattle_Wiki",
+      },
+      {
         label: "./gw2_efficiency",
         value: "https://gw2efficiency.com/",
       },
