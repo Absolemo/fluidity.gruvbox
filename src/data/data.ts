@@ -153,27 +153,35 @@ export const links: linkGroup[] = [                               /* Hier werden
     ],
   },
   {
-    title: "Raindrop.io",
+    title: "Guild Wars 2",
     links: [
       {
-        label: "./linux",
-        value: "https://app.raindrop.io/my/51979736",
+        label: "./event_timer",
+        value: "https://wiki-de.guildwars2.com/wiki/Event-Timer",
       },
       {
-        label: "./customization",
-        value: "https://app.raindrop.io/my/52155503",
+        label: "./gw2_efficiency",
+        value: "https://gw2efficiency.com/",
       },
       {
-        label: "./server",
-        value: "https://app.raindrop.io/my/53305784",
+        label: "./gw2_bltc",
+        value: "https://www.gw2bltc.com/",
       },
       {
-        label: "./coden",
-        value: "https://app.raindrop.io/my/53032181",
+        label: "./fast.farming",
+        value: "https://fast.farming-community.eu/",
       },
       {
-        label: "./music/to/download",
-        value: "https://app.raindrop.io/my/52101006",
+        label: "./true.farming",
+        value: "https://www.true-farming.com/",
+      },
+      {
+        label: "./peu_research_center",
+        value: "https://peuresearchcenter.com/",
+      },
+      {
+        label: "./can_i_craft",
+        value: "https://canicraft.com/",
       },
     ],
   },
