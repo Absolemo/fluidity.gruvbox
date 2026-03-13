@@ -114,9 +114,14 @@ export const links: linkGroup[] = [                               /* Hier werden
         value: "https://www.deviantart.com/",
       },
       {
+        label: "./steam_grid",
+        value: "https://www.steamgriddb.com/",
+      },
+      {
         label: "./ai_image_enlarger",
         value: "https://bigjpg.com/en",
       },
+
     ],
   },
   {
