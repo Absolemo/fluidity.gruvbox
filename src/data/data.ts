@@ -24,8 +24,8 @@ export const links: linkGroup[] = [                               /* Hier werden
     title: "Classics",
     links: [
       {
-        label: "./raindrop.io",
-        value: "https://app.raindrop.io/my/-1",
+        label: "./linkwarden",
+        value: "http://192.168.2.81:7461/dashboard",
       },      
       {
         label: "./youtube",
