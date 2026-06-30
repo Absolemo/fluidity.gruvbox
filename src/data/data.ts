@@ -25,7 +25,7 @@ export const links: linkGroup[] = [                               /* Hier werden
     links: [
       {
         label: "./linkwarden",
-        value: "http://192.168.2.81:7461/dashboard",
+        value: "",
       },      
       {
         label: "./youtube",
