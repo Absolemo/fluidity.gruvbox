@@ -59,16 +59,7 @@ export const links: linkGroup[] = [
         label: "./amazon",
         value: "https://amazon.de",
       },
-      {
-        label: "./prime_gaming",
-        value: "https://luna.amazon.de/claims/home",
-      },
-      {
-        label: "./humble_bundle",
-        value:
-        "https://www.humblebundle.com/membership/home?hmb_campaign=25-11-04_choice_sitewide_banner&hmb_medium=banner",
-      },
-    ],
+      ],
   },
 {
   title: "System",
@@ -171,39 +162,16 @@ export const links: linkGroup[] = [
   ],
 },
 {
-  title: "Guild Wars 2",
+  title: "Gaming",
   links: [
     {
-      label: "./event_timer",
-      value: "https://wiki-de.guildwars2.com/wiki/Event-Timer",
+      label: "./prime_gaming",
+      value: "https://luna.amazon.de/claims/home",
     },
     {
-      label: "./metabattle",
-      value: "https://metabattle.com/wiki/MetaBattle_Wiki",
-    },
-    {
-      label: "./gw2_efficiency",
-      value: "https://gw2efficiency.com/",
-    },
-    {
-      label: "./gw2_bltc",
-      value: "https://www.gw2bltc.com/",
-    },
-    {
-      label: "./fast.farming",
-      value: "https://fast.farming-community.eu/",
-    },
-    {
-      label: "./true.farming",
-      value: "https://www.true-farming.com/",
-    },
-    {
-      label: "./peu_research_center",
-      value: "https://peuresearchcenter.com/",
-    },
-    {
-      label: "./can_i_craft",
-      value: "https://canicraft.com/",
+      label: "./humble_bundle",
+      value:
+      "https://www.humblebundle.com/membership/home?hmb_campaign=25-11-04_choice_sitewide_banner&hmb_medium=banner",
     },
   ],
 },
