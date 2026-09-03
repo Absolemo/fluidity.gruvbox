@@ -6,6 +6,7 @@ import pic_5 from "./pictures/pic_5.jpg"
 import pic_6 from "./pictures/pic_6.jpg"
 import pic_7 from "./pictures/pic_7.jpg"
 import pic_8 from "./pictures/pic_8.png"
+
 import { queryToken } from "../Startpage/Searchbar/Searchbar"
 
 export interface dataElem {
@@ -18,138 +19,196 @@ export interface linkGroup {
   links: dataElem[]
 }
 
-export const links: linkGroup[] = [
+export const links: linkGroup[] = [                               /* Hier werden die verschiedenen Reiter definiert ein block = ein balken auf der webseite*/
+ [
   {
-    title: "Reddit",
-    links: [
+    "title": "Classics",
+    "links": [
       {
-        label: "r/startpages",
-        value: "https://www.reddit.com/r/startpages/",
+        "label": "./linkding",
+        "value": "https://linkding.mother-nature.synology.me/"
       },
       {
-        label: "r/unixporn",
-        value: "https://www.reddit.com/r/unixporn/",
+        "label": "./rss_feed",
+        "value": "https://mother-nature.synology.me/tt-rss"
       },
       {
-        label: "r/rainmeter",
-        value: "https://www.reddit.com/r/rainmeter/",
+        "label": "./youtube",
+        "value": "https://youtube.com/"
       },
       {
-        label: "r/AnimalsBeingDerps",
-        value: "https://www.reddit.com/r/AnimalsBeingDerps/",
+      "label": "./duckduckai",
+      "value": "https://duck.ai/"
       },
-    ],
+      {
+        "label": "./reddit",
+        "value": "https://reddit.com/"
+      },
+      {
+        "label": "./instagram",
+        "value": "https://instagram.com/"
+      },
+      {
+        "label": "./monkeytype",
+        "value": "https://monkeytype.com/"
+      },
+      {
+        "label": "./deepl",
+        "value": "https://www.deepl.com/en"
+      },
+      {
+        "label": "./amazon",
+        "value": "https://amazon.de"
+      },
+      {
+        "label": "./prime_gaming",
+        "value": "https://luna.amazon.de/claims/home"
+      },
+      {
+        "label": "./humble_bundle",
+        "value": "https://www.humblebundle.com/membership/home?hmb_campaign=25-11-04_choice_sitewide_banner&hmb_medium=banner"
+      }
+    ]
   },
   {
-    title: "3D Modelling",
-    links: [
+    "title": "System",
+    "links": [
       {
-        label: "Blender",
-        value: "https://www.blender.org/",
+        "label": "./server_dashboard",
+        "value": "https://homarr.mother-nature.synology.me/"
       },
       {
-        label: "BlenderGuru",
-        value: "https://www.blenderguru.com/",
+        "label": "./mother_nature",
+        "value": "https://mother-nature.synology.me:5001"
       },
       {
-        label: "Poliigon",
-        value: "https://www.poliigon.com/",
+        "label": "./synology_insight",
+        "value": "https://insight.synology.com/login?error=login_required&error_description=The%20Authorization%20Server%20requires%20End-User%20authentication.%20Prompt%20%27none%27%20was%20requested,%20but%20no%20existing%20login%20session%20was%20found.&state=kpfszaavtetraszsqrntcpni"
       },
       {
-        label: "Blender tutorial",
-        value:
-          "https://www.youtube.com/watch?v=NyJWoyVx_XI&list=PLjEaoINr3zgEq0u2MzVgAaHEBt--xLB6U",
+        "label": "./tailscale",
+        "value": "https://login.tailscale.com/admin/machines?refreshed=true"
       },
       {
-        label: "The other Blender tutorial",
-        value:
-          "https://www.youtube.com/watch?v=bpvh-9H8S1g&list=PL8eKBkZzqDiU-qcoaghCz04sMitC1yx6k&index=1",
+        "label": "./aur",
+        "value": "https://aur.archlinux.org/"
       },
-    ],
+      {
+        "label": "./flathub",
+        "value": "https://flathub.org/"
+      },
+      {
+        "label": "./github",
+        "value": "https://github.com/"
+      },
+      {
+        "label": "./archive.org",
+        "value": "https://archive.org/"
+      }
+    ]
   },
   {
-    title: "Design",
-    links: [
+    "title": "Design",
+    "links": [
       {
-        label: "PixlrX",
-        value: "https://pixlr.com/x/",
+        "label": "./alpha_coders",
+        "value": "https://alphacoders.com/"
       },
       {
-        label: "AI Image Enlarger",
-        value: "https://bigjpg.com/en",
+        "label": "./unsplash",
+        "value": "https://unsplash.com/"
       },
       {
-        label: "Img to Svg Converter",
-        value: "https://picsvg.com/",
+        "label": "./wallpaper_flare",
+        "value": "https://www.wallpaperflare.com/"
       },
       {
-        label: "Affinity",
-        value: "https://affinity.serif.com/en-us/tutorials/designer/desktop/",
+        "label": "./deviant_art",
+        "value": "https://www.deviantart.com/"
       },
       {
-        label: "Affinity - YT",
-        value: "https://www.youtube.com/c/AffinityRevolution/playlists",
+        "label": "./steam_grid",
+        "value": "https://www.steamgriddb.com/"
       },
-    ],
+      {
+        "label": "./ai_image_enlarger",
+        "value": "https://bigjpg.com/en"
+      }
+    ]
   },
   {
-    title: "Music",
-    links: [
+    "title": "Music",
+    "links": [
       {
-        label: "i wanna be a cowboy",
-        value: "https://www.youtube.com/watch?v=8zWz92f_HGs",
+        "label": "./jellyfin",
+        "value": "https://jellyfin.mother-nature.synology.me/"
       },
       {
-        label: "let the bodies hit the floor",
-        value: "https://www.youtube.com/watch?v=b--VKaCB9u0",
+        "label": "./musicbrainz",
+        "value": "https://musicbrainz.org/"
       },
       {
-        label: "Nobody Kanna Cross It",
-        value: "https://www.youtube.com/watch?v=2wqTnwJGvtc",
+        "label": "./discogs",
+        "value": "https://www.discogs.com/"
       },
       {
-        label: "Smug Dancin",
-        value: "https://www.youtube.com/watch?v=eNZ9Od1jQ4Q",
+        "label": "./bandcamp",
+        "value": "https://bandcamp.com/dazen95/feed"
       },
       {
-        label: "Utamaru - The Sanctified Mind Cover",
-        value: "https://www.youtube.com/watch?v=MHlJKLlS07U",
+        "label": "./youtube",
+        "value": "https://www.youtube.com/"
       },
-    ],
+      {
+        "label": "./soundcloud",
+        "value": "https://soundcloud.com/discover"
+      },
+      {
+        "label": "./spotify/to/youtube",
+        "value": "https://spotifyreleaselist.netlify.app/"
+      }
+    ]
   },
   {
-    title: "Sauce",
-    links: [
+    "title": "Guild Wars 2",
+    "links": [
       {
-        label: "Pictures - DeathAndMilk",
-        value: "https://www.instagram.com/deathandmilk_/",
+        "label": "./event_timer",
+        "value": "https://wiki-de.guildwars2.com/wiki/Event-Timer"
       },
       {
-        label: "Icons - FontAwesome",
-        value: "https://fontawesome.com/icons",
+        "label": "./metabattle",
+        "value": "https://metabattle.com/wiki/MetaBattle_Wiki"
       },
       {
-        label: "Text Flicker - CodeMyUI",
-        value:
-          "https://codemyui.com/crt-screen-text-flicker-animation-in-pure-css/",
+        "label": "./gw2_efficiency",
+        "value": "https://gw2efficiency.com/"
       },
       {
-        label: "Wave Animation - mburakerman",
-        value: "https://codepen.io/mburakerman/pen/eRZZEv",
+        "label": "./gw2_bltc",
+        "value": "https://www.gw2bltc.com/"
       },
       {
-        label: "Da real sauce ԅ(♡﹃♡ԅ)",
-        value: "https://www.youtube.com/watch?v=qr89xoZyE1g",
+        "label": "./fast.farming",
+        "value": "https://fast.farming-community.eu/"
       },
       {
-        label: "Even more real sauce ( ͡° ͜ʖ ͡°)",
-        value: "https://www.youtube.com/watch?v=VLhJOd_TFiI",
+        "label": "./true.farming",
+        "value": "https://www.true-farming.com/"
       },
-    ],
-  },
+      {
+        "label": "./peu_research_center",
+        "value": "https://peuresearchcenter.com/"
+      },
+      {
+        "label": "./can_i_craft",
+        "value": "https://canicraft.com/"
+      }
+    ]
+  }
 ]
 
-export const images: dataElem[] = [
+export const images: dataElem[] = [                                             /* ENDE der Blöcke */
   { label: "pic_1", value: pic_1 },
   { label: "pic_2", value: pic_2 },
   { label: "pic_3", value: pic_3 },
@@ -214,14 +273,13 @@ export interface Theme {
 
 export const themes: Theme[] = [
   {
-    name: "Catppuccin",
-    image:
-      "https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png",
+    name: "Gruvbox Material",                                             /* Hier habe ich mein eigenes Gruvbox TTheme reingebaut*/
+    image: pic_8,                                                         /*Viele Themes werden definiert, aber wie ich sie schnell ändere kp */
     colors: {
-      "--bg-color": "#24273A",
-      "--default-color": "#CAD3F5",
-      "--accent-color": "#C6A0F6",
-      "--accent-color2": "#8AADF4",
+      "--bg-color": "#282828",
+      "--default-color": "#ddc7a1",
+      "--accent-color": "#e78a4e",
+      "--accent-color2": "#a9b665",
     },
   },
   {
