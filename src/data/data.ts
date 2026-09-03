@@ -172,9 +172,11 @@ export const links: linkGroup[] = [
       label: "./humble_bundle",
       value:
       "https://www.humblebundle.com/membership/home?hmb_campaign=25-11-04_choice_sitewide_banner&hmb_medium=banner",
+    },
   ],
 },
 ];
+
 
 export const images: dataElem[] = [
   { label: "pic_1", value: pic_1 },
