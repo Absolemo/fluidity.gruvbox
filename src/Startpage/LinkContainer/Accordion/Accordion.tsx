@@ -1,22 +1,26 @@
-import { MouseEvent, PropsWithChildren, useState } from "react"
+import {
+  MouseEvent,
+  PropsWithChildren,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
 
-import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 
 const StyledAccordionContainer = styled.div`
+  margin-left: 100px;
   display: flex;
-  flex: 1;
-  overflow: hidden;
+  width: calc(100% - 400px - 100px);
 `
 
 export const AccordionContainer = ({ children }: PropsWithChildren) => (
   <StyledAccordionContainer>{children}</StyledAccordionContainer>
 )
 
-const StyledAccordionGroup = styled.div<{ active: boolean }>`
+const StyledAccordionGroup = styled.div`
   height: 400px;
   display: flex;
-  ${({ active }) => active && "flex: 1;"}
   padding: 0 10px;
   flex-direction: row;
   border-right: 3px solid var(--default-color);
@@ -25,14 +29,14 @@ const StyledAccordionGroup = styled.div<{ active: boolean }>`
   }
 `
 
-const AccordionContent = styled.div`
+const AccordionContent = styled.div<{ width: number }>`
   height: 100%;
-  flex: 1;
+  width: ${({ width }) => `${width}px`};
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  transition: 300ms;
+  transition: 0.3s;
 `
 
 const AccordionTitleWrapper = styled.button<{ active: boolean }>`
@@ -109,21 +113,21 @@ const AccordionTitleWrapper = styled.button<{ active: boolean }>`
 
   ${({ active }) =>
     !active &&
-    css`
-      :hover {
-        > * {
-          color: var(--bg-color);
-          text-shadow:
-            5px 0px 0 var(--accent-color),
-            4px 0px 0 var(--accent-color),
-            3px 0px 0 var(--accent-color),
-            2px 0px 0 var(--accent-color),
-            1px 0px 0 var(--accent-color),
-            -1px 0px 0 var(--accent-color),
-            0px 1px 0 var(--accent-color),
-            0px -1px 0 var(--accent-color);
+    `
+        :hover{
+            > * {
+                color: var(--bg-color);
+                text-shadow:
+                    5px 0px 0 var(--accent-color),
+                    4px 0px 0 var(--accent-color),
+                    3px 0px 0 var(--accent-color),
+                    2px 0px 0 var(--accent-color),
+                    1px 0px 0 var(--accent-color),
+                    -1px 0px 0 var(--accent-color),
+                    0px 1px 0 var(--accent-color),
+                    0px -1px 0 var(--accent-color);
+            }
         }
-      }
     `};
 `
 
@@ -143,24 +147,6 @@ type groupProps = PropsWithChildren<{
   onMouseDown: (e: MouseEvent) => void
 }>
 
-const getAvailableContentWidth = (element: HTMLElement | null) => {
-  const parent = element?.parentElement
-  if (!parent) return 0
-  if (parent.children.length === 1) return "100%"
-  const accordionHeaderWidth = (() => {
-    const width = 90
-    const paddingX = 10 * 2
-    const border = 3
-    return width + paddingX + border
-  })()
-  const firstBorder = 3
-  return (
-    parent.offsetWidth -
-    firstBorder -
-    parent.children.length * accordionHeaderWidth
-  )
-}
-
 export const AccordionGroup = ({
   active,
   title,
@@ -168,19 +154,19 @@ export const AccordionGroup = ({
   onClick,
   onMouseDown,
 }: groupProps) => {
-  const [contentWidth, setContentWidth] = useState<number | string | null>(null)
+  const ref = useRef<HTMLDivElement>(null)
+  const [contentWidth, setContentWidth] = useState(active ? 500 : 0)
+  useEffect(() => {
+    const parent = ref.current?.parentElement
+    if (parent && active) {
+      setContentWidth(parent.clientWidth - parent.children.length * 113 - 3)
+    } else {
+      setContentWidth(0)
+    }
+  }, [active])
 
   return (
-    <StyledAccordionGroup
-      ref={element => {
-        if (element && active) {
-          setContentWidth(getAvailableContentWidth(element))
-        } else {
-          setContentWidth(0)
-        }
-      }}
-      active={active}
-    >
+    <StyledAccordionGroup ref={ref}>
       <AccordionTitleWrapper
         active={active}
         onMouseDown={onMouseDown}
@@ -192,15 +178,7 @@ export const AccordionGroup = ({
           {title}
         </AccordionTitle>
       </AccordionTitleWrapper>
-      <AccordionContent
-        style={{
-          width:
-            typeof contentWidth === "string"
-              ? contentWidth
-              : `${contentWidth ?? 0}px`,
-        }}
-        aria-hidden={!active || undefined}
-      >
+      <AccordionContent width={contentWidth} aria-hidden={!active || undefined}>
         {children}
       </AccordionContent>
     </StyledAccordionGroup>
