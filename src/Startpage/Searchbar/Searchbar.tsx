@@ -76,7 +76,7 @@ export const Searchbar = () => {
     <StyledSearchbarContainer>
       {searchSymbol && <SearchIcon src={searchSymbol} />}
       <StyledSearchbar
-        placeholder="Always stay clean!"
+        placeholder="#ERROR: Please Enter Text!"
         type="input"
         onKeyUp={e =>
           e.key === "Enter" && redirectToSearch(e.currentTarget.value)
