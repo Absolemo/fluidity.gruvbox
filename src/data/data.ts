@@ -32,6 +32,10 @@ export const links: linkGroup[] = [
         value: "https://mother-nature.synology.me/tt-rss",
       },
       {
+        label: "./calendar",
+        value: "https://calendar.mother-nature.synology.me",
+      },
+      {
         label: "./youtube",
         value: "https://youtube.com/",
       },
