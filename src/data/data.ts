@@ -77,13 +77,8 @@ export const links: linkGroup[] = [
       value: "https://mother-nature.synology.me:5001",
     },
     {
-      label: "./synology_insight",
-      value:
-      "https://insight.synology.com/login?error=login_required&error_description=The%20Authorization%20Server%20requires%20End-User%20authentication.%20Prompt%20%27none%27%20was%20requested,%20but%20no%20existing%20login%20session%20was%20found.&state=kpfszaavtetraszsqrntcpni",
-    },
-    {
       label: "./tailscale",
-      value: "https://login.tailscale.com/admin/machines?refreshed=true",
+      value: "https://login.tailscale.com/",
     },
     {
       label: "./aur",
@@ -174,8 +169,7 @@ export const links: linkGroup[] = [
     },
     {
       label: "./humble_bundle",
-      value:
-      "https://www.humblebundle.com/membership/home?hmb_campaign=25-11-04_choice_sitewide_banner&hmb_medium=banner",
+      value: "https://www.humblebundle.com/",
     },
   ],
 },
